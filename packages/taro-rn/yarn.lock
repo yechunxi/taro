@@ -998,17 +998,17 @@
     "@types/istanbul-reports" "^1.1.1"
     "@types/yargs" "^13.0.0"
 
-"@tarojs/taro@1.3.29":
-  version "1.3.29"
-  resolved "https://registry.yarnpkg.com/@tarojs/taro/-/taro-1.3.29.tgz#20b28f577f72866a1b0470625617231633c13eae"
-  integrity sha512-BhgbaWZWrs0rvz+uu1mHKnqN4CPzlQd4J00Suk0vbIgP4RSDyJplL6sOj/ZjHeGYcEDOIYpO5dopVfuXJrmiBQ==
+"@tarojs/taro@1.3.37":
+  version "1.3.37"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro/-/taro-1.3.37.tgz#0897d90bacb7f0afbfd816acdaeef8361e701847"
+  integrity sha512-yQX2BrRX++uaI5nxZWStVKMD5wcTa11OTUq4MEXNV6Od/1grZmyEabDVCzgKhvEQesH+lymmS/tvsUnXXxzTnw==
   dependencies:
-    "@tarojs/utils" "1.3.29"
+    "@tarojs/utils" "1.3.37"
 
-"@tarojs/utils@1.3.29":
-  version "1.3.29"
-  resolved "https://registry.yarnpkg.com/@tarojs/utils/-/utils-1.3.29.tgz#3f473a470ce64241985725b35052c1c27f5052df"
-  integrity sha512-mdyUvbDIEuQ6ZyVOp24F3my3w8x7R+um/uDLO/iqpYcczoE9JSNdFJPvVf6BpCI3CcRxYaDYZ6pCTWGuGvAmOQ==
+"@tarojs/utils@1.3.37":
+  version "1.3.37"
+  resolved "https://registry.yarnpkg.com/@tarojs/utils/-/utils-1.3.37.tgz#46897c71076059be3f1da925f337694a0bfeee71"
+  integrity sha512-KTs+Ae8SeHf9ASX7iyvkXyp/Ffoareec2lhX18kQggqbIoNJ8/y7mbLSwbCvZqb+u5K+eZkaCPQJDxyGIopyyw==
 
 "@types/babel-types@^7.0.7":
   version "7.0.7"
@@ -4203,9 +4203,9 @@ gulplog@^1.0.0:
     glogg "^1.0.0"
 
 handlebars@^4.0.3:
-  version "4.4.5"
-  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.4.5.tgz#1b1f94f9bfe7379adda86a8b73fb570265a0dddd"
-  integrity sha512-0Ce31oWVB7YidkaTq33ZxEbN+UDxMMgThvCe8ptgQViymL5DPis9uLdTA13MiRPhgvqyxIegugrP97iK3JeBHg==
+  version "4.7.3"
+  resolved "https://registry.yarnpkg.com/handlebars/-/handlebars-4.7.3.tgz#8ece2797826886cf8082d1726ff21d2a022550ee"
+  integrity sha512-SRGwSYuNfx8DwHD/6InAPzD6RgeruWLT+B8e8a7gGs8FWgHzlExpTFMEq2IA6QpAfOClpKHy6+8IqTjeBCu6Kg==
   dependencies:
     neo-async "^2.6.0"
     optimist "^0.6.1"
@@ -8610,9 +8610,9 @@ uglify-es@^3.1.9:
     source-map "~0.6.1"
 
 uglify-js@^3.1.4:
-  version "3.6.4"
-  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.6.4.tgz#88cc880c6ed5cf9868fdfa0760654e7bed463f1d"
-  integrity sha512-9Yc2i881pF4BPGhjteCXQNaXx1DCwm3dtOyBaG2hitHjLWOczw/ki8vD1bqyT3u6K0Ms/FpCShkmfg+FtlOfYA==
+  version "3.8.0"
+  resolved "https://registry.yarnpkg.com/uglify-js/-/uglify-js-3.8.0.tgz#f3541ae97b2f048d7e7e3aa4f39fd8a1f5d7a805"
+  integrity sha512-ugNSTT8ierCsDHso2jkBHXYrU8Y5/fY2ZUprfrJUiD7YpuFvV4jODLFmb3h4btQjqr5Nh4TX4XtgDfCU1WdioQ==
   dependencies:
     commander "~2.20.3"
     source-map "~0.6.1"
