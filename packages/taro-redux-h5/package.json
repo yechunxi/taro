@@ -34,7 +34,7 @@
     "redux": "^2.0.0 || ^3.0.0 || ^4.0.0-0"
   },
   "dependencies": {
-    "hoist-non-react-statics": "^2.5.0",
+    "hoist-non-react-statics": "^3.3.2",
     "invariant": "^2.2.4",
     "loose-envify": "^1.1.0",
     "prop-types": "^15.6.1"
