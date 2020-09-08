@@ -277,6 +277,7 @@ export default class Kernel extends EventEmitter {
       name = args.name
       opts = args.opts
     }
+
     this.debugger('command:run')
     this.debugger(`command:run:name:${name}`)
     this.debugger('command:runOpts')

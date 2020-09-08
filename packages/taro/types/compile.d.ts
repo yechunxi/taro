@@ -378,6 +378,10 @@ export interface IProjectConfig extends IProjectBaseConfig {
   }
   mini?: IMiniAppConfig
   h5?: IH5Config
-  rn?: IH5Config
+  rn?: IRNConfig
   [key: string]: any
+}
+
+export interface IRNConfig {
+  rnVersion?: string
 }

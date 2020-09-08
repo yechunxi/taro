@@ -4,18 +4,19 @@
   // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
   "version": "0.2.0",
   "configurations": [
+
   {
     "type": "node",
     "request": "launch",
     "name": "CLI debug",
-    "program": "${workspaceFolder}/packages/taro-cli/bin/taro",
-    // "cwd": "${project absolute path}",
-    // "args": [
-    //   "build",
-    //   "--type",
-    //   "weapp",
-    //   "--watch"
-    // ],
+    "program": "/Users/yechunxi/Documents/myself_github_repository/taro/packages/taro-cli/bin/taro",
+    "cwd": "/Users/yechunxi/Documents/Test/taro-3.x-demo",
+    "args": [
+      "build",
+      "--type",
+      "rn",
+      "--watch"
+    ],
     "skipFiles": [
       "<node_internals>/**"
     ]
