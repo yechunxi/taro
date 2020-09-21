@@ -33,6 +33,7 @@
   },
   "homepage": "https://github.com/NervJS/taro#readme",
   "devDependencies": {
+    "@tarojs/rn-transform": "file:../taro-rn-transform",
     "@tarojs/taro": "^3.0.8",
     "jest": "^26.4.2",
     "typescript": "^3.4.5"

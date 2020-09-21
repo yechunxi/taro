@@ -125,9 +125,9 @@
   },
   "devDependencies": {
     "@tarojs/mini-runner": "3.0.8",
-    "@tarojs/rn-runner": "^3.0.8",
-    "@tarojs/service": "^3.0.8",
-    "@tarojs/taro-rn": "^2.2.10",
+    "@tarojs/rn-runner": "file:../taro-rn-runner",
+    "@tarojs/rn-transform": "file:../taro-rn-transform",
+    "@tarojs/taro": "^3.0.8",
     "@tarojs/webpack-runner": "3.0.8"
   }
 }

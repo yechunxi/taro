@@ -25,7 +25,10 @@
     "packages/taro-webpack-runner",
     "packages/taro-with-weapp",
     "packages/taroize",
-    "packages/taro-rn-runner"
+    "packages/taro-rn-runner",
+    "packages/taro-rn-transform",
+    "packages/taro-runtime-rn",
+    "packages/taro-router-rn"
   ],
   "command": {
     "publish": {

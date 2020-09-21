@@ -1,0 +1,26 @@
+{
+  "name": "@tarojs/runtime-rn",
+  "version": "3.0.8",
+  "description": "taro-runtime-rn",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "jest",
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "keywords": [
+    "taro"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NervJS/taro/tree/master/packages/taro-runtime-rn"
+  },
+  "author": "yechunxi",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "@tarojs/components-rn": "^2.2.10",
+    "@tarojs/taro": "^3.0.11",
+    "@tarojs/router-rn": "file:../taro-router-rn"
+  }
+}

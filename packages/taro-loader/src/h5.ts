@@ -80,6 +80,5 @@ ${execBeforeCreateWebApp || ''}
 var inst = ${creator}(component, ${frameworkArgs})
 createRouter(inst, config, ${importFrameworkName})
 `
-
   return code
 }

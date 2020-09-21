@@ -9,8 +9,8 @@
     "index.js"
   ],
   "scripts": {
-    "build": "rollup -c rollup.config.js",
-    "dev": "rollup -c rollup.config.js --watch",
+    "build": "tsc",
+    "dev": "tsc -w",
     "test": "jest",
     "test:dev": "jest --watch"
   },
@@ -23,5 +23,12 @@
     "router-rn"
   ],
   "author": "yechunxi",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "@react-navigation/bottom-tabs": "^5.8.0",
+    "@react-navigation/native": "^5.7.3",
+    "@react-navigation/stack": "^5.9.0",
+    "@tarojs/taro": "^3.0.11"
+  },
+  "devDependencies": {}
 }

@@ -1,0 +1,33 @@
+{
+  "name": "@tarojs/rn-transform",
+  "version": "3.0.8",
+  "description": "taro",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w"
+  },
+  "author": "yechunxi",
+  "bugs": {
+    "url": "https://github.com/NervJS/taro/issues"
+  },
+  "directories": {
+    "lib": "lib",
+    "test": "__tests__"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NervJS/taro.git"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@tarojs/helper": "^3.0.11",
+    "@tarojs/rn-transform": "file:../taro-rn-transform",
+    "@tarojs/router-rn": "file:../taro-router-rn",
+    "@tarojs/taro": "^3.0.9",
+    "lodash": "^4.17.20"
+  }
+}

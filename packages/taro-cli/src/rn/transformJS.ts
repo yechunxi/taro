@@ -514,11 +514,11 @@ export function parseJSCode ({ code, filePath, isEntryFile, projectConfig }) {
             const parentPath = astPath.parentPath
 
             if (t.isMemberExpression(callee)) {
-              const object = callee.object as t.Identifier
-              const property = callee.property as t.Identifier
-              if (object.name === taroImportDefaultName && property.name === 'render') {
-                astPath.remove()
-              }
+              // const object = callee.object as t.Identifier
+              // const property = callee.property as t.Identifier
+              // if (object.name === taroImportDefaultName && property.name === 'render') {
+              //   astPath.remove()
+              // }
             } else {
               if (calleeName === setStoreFuncName) {
                 if (

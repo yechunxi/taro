@@ -21,7 +21,7 @@ module.exports = {
     '@typescript-eslint/camelcase': 0,
     '@typescript-eslint/no-namespace': 0,
     'standard/no-callback-literal': 0,
-    'no-console': ['error', { allow: ['warn', 'error'] }],
+    // 'no-console': ['error', { allow: ['warn', 'error'] }],
     'prefer-spread': 0,
     'prefer-rest-params': 0,
     'no-prototype-builtins': 0,
