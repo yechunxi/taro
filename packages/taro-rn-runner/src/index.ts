@@ -38,9 +38,9 @@ export default async function build (appPath: string, config: IBuildConfig) {
   // console.log(1112)
   // const appPath = ''
   const code = transformRN('app', appPath)
-  console.log(code)
+  // console.log(code)
   fs.writeFileSync(path.join(appPath, 'rn.js'), code)
-  const pagePath = ''
+  const pagePath = appPath + '/src/pages/index/index'
   const pagecode = transformRN('page', pagePath)
   fs.writeFileSync(path.join(appPath, 'page.js'), pagecode)
 

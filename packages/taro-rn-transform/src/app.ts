@@ -1,8 +1,9 @@
-import { readConfig, isEmptyObject } from '@tarojs/helper'
-import { AppConfig } from '@tarojs/taro'
+import { isEmptyObject } from '@tarojs/helper'
 import { camelCase } from 'lodash'
+import { Config } from '@tarojs/taro'
+import { getConfigContent } from './utils'
 
-function getPagesResource (config: AppConfig) {
+function getPagesResource (config: Config) {
   const importPages: string[] = []
   const screenNames: any[] = []
   const pages = config.pages || []
@@ -39,14 +40,14 @@ function getAppConfig (appPath: string) {
   if (!appPath) {
     throw new Error('缺少 app 全局配置，请检查！')
   }
-  const appConfig = readConfig(appPath)
+  const appConfig: Config = getConfigContent(appPath)
   if (isEmptyObject(appConfig)) {
     throw new Error('缺少 app 全局配置，请检查！')
   }
   if (appConfig && (!appConfig.pages || !appConfig.pages.length)) {
     throw new Error('全局配置缺少 pages 字段，请检查！')
   }
-  return appConfig as AppConfig
+  return appConfig
 }
 
 export default function generateAppEntry (appPath: string) {
@@ -56,17 +57,16 @@ export default function generateAppEntry (appPath: string) {
   const routeList = pages.screenNames
   // 如果config ,有redux，再引入
   const importRedux = ''
-  const store = {}
-  // const store =  JSON.stringify({}) : 'configStore()'
+  const appComponentPath = './src/app'
 
   const code = `import { createRNApp } from '@tarojs/runtime-rn'
-  import React,{ Component } from 'react'
+  import Component from ${appComponentPath}
   ${importPageList}
   ${importRedux}
   var config = ${JSON.stringify({ appConfig: appConfig })}
   config['pageList'] = [${routeList.map(screen => getPageScreen(screen))}]
   window.__taroAppConfig = config
-  export default createRNApp(Component,config,${store})
+  export default createRNApp(Component,config)
   `
   return code
 }

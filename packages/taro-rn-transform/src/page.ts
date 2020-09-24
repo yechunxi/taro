@@ -4,11 +4,11 @@ import {
 
 export default function generateRNPage (pagePath: string) {
   const config = getPageConfig(pagePath)
-  const componentPath = ''
+  const componentPath = './index.source'
   const configString = JSON.stringify(config)
 
   const code = `import { createRNPage } from '@tarojs/runtime-rn'
-import { readConfig } from '../../taro-helper/src/utils';
+import { readConfig } from '@tarojs/helper';
   import component from ${componentPath}
   var config = ${configString}
   export default  createRNPage(component,config)

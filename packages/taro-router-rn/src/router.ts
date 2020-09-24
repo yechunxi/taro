@@ -71,7 +71,7 @@ function getTabItemOptions (item, index: number) {
     tabBarIcon: ({ focused }) => {
       const path = focused ? selectIconPath : iconPath
       if (!path) return null
-      const source = isUrl(path) ? { uri: path } : path
+      const source = isUrl(path) ? { uri: path } : { uri: path }
       const style = { width: 30, height: 30 }
       return React.createElement(Image, { style: style, source: source }, null)
     }
@@ -98,14 +98,24 @@ function createTabItem (config: RootConfig, tabName: string, props: any) {
   const stackScreen: any = []
   allPages.forEach(item => {
     if (item.name === tabName) {
-      stackScreen.push(React.createElement(tabStack.Screen, { key: `page${item.name}`, name: `${item.name}`, component: item.component, ...props }, null))
+      stackScreen.push(React.createElement(tabStack.Screen, { key: `tabpages${item.name}`, name: `${item.name}`, component: item.component, ...props }, null))
     }
   })
   pageList.forEach(item => {
-    const screenNode = React.createElement(tabStack.Screen, { key: `${item.name}`, name: `${item.name}`, component: item.component, ...props }, null)
+    const screenNode = React.createElement(tabStack.Screen, { key: `page${tabName}${item.name}`, name: `${item.name}`, component: item.component, ...props }, null)
     stackScreen.push(screenNode)
   })
   return React.createElement(tabStack.Navigator, { options: getStackOptions(config) }, stackScreen)
+}
+
+function getTabBarVisible (route: any, tabName: string) {
+  const routeName = route.state
+    ? route.state.routes[route.state.index].name
+    : ''
+  if (routeName === tabName) {
+    return true
+  }
+  return false
 }
 
 function createTabNavigate (config: RootConfig) {
@@ -113,10 +123,17 @@ function createTabNavigate (config: RootConfig) {
   const tabBar = config.tabBar
   const tabList: any = []
   tabBar?.list.forEach((item, index) => {
-    const tabItemOptions = getTabItemOptions(item, index)
+    const tabItemOptions = Object.assign({}, getTabItemOptions(item, index))
     const path = item.pagePath.startsWith('/') ? item.pagePath : `/${item.pagePath}`
     const tabName = camelCase(path)
-    const tabNode = React.createElement(Tab.Screen, { name: `${item.text}`, options: tabItemOptions }, (props) => createTabItem(config, tabName, props))
+    const tabNode = React.createElement(Tab.Screen, {
+      key: `tab${tabName}`,
+      name: `${item.text}`,
+      options: ({ route }) => ({
+        ...tabItemOptions,
+        tabBarVisible: getTabBarVisible(route, tabName)
+      })
+    }, (props) => createTabItem(config, tabName, props))
     tabList.push(tabNode)
   })
   // tabbarOptions

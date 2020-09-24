@@ -9,7 +9,7 @@ interface RNAppConfig {
   pageList: Array<Record<string, any>>
 }
 
-export function createRNApp (App: React.ComponentClass, config: RNAppConfig, store: any) {
+export function createRNApp (App: React.ComponentClass, config: RNAppConfig) {
   const appConfig = config.appConfig
   const routerConfig = {
     tabBar: appConfig.tabBar,
@@ -19,7 +19,8 @@ export function createRNApp (App: React.ComponentClass, config: RNAppConfig, sto
   const NewAppComponent = (AppCompoent) => {
     return class extends AppCompoent {
       render () {
-        return React.createElement(TCNProvider, { store: store }, createRouter(routerConfig))
+        return React.createElement(TCNProvider, null,
+          React.createElement(AppCompoent, { ...this.props }, createRouter(routerConfig)))
       }
     }
   }
