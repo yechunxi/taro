@@ -28,7 +28,7 @@ interface ITabBar {
 
 interface PageItem {
   name: string,
-  component: any
+  component: unknown
 }
 
 interface RootConfig {
@@ -91,51 +91,45 @@ function getStackOptions (config: RootConfig) {
   }
 }
 
-function createTabItem (config: RootConfig, tabName: string, props: any) {
-  const allPages = config.pages
-  const pageList = getPageList(config)
-  const tabStack = createStackNavigator()
-  const stackScreen: any = []
-  allPages.forEach(item => {
+function getTabItem (config: RootConfig, tabName: string) {
+  const tabBar = config.tabBar
+  const pageList = config.pages
+  if (!tabBar) return pageList
+  let tabItem: PageItem = {
+    name: '',
+    component: {}
+  }
+  pageList.forEach(item => {
     if (item.name === tabName) {
-      stackScreen.push(React.createElement(tabStack.Screen, { key: `tabpages${item.name}`, name: `${item.name}`, component: item.component, ...props }, null))
+      tabItem = item
     }
   })
-  pageList.forEach(item => {
-    const screenNode = React.createElement(tabStack.Screen, { key: `page${tabName}${item.name}`, name: `${item.name}`, component: item.component, ...props }, null)
-    stackScreen.push(screenNode)
-  })
-  return React.createElement(tabStack.Navigator, { options: getStackOptions(config) }, stackScreen)
+  return tabItem
 }
 
-function getTabBarVisible (route: any, tabName: string) {
-  const routeName = route.state
-    ? route.state.routes[route.state.index].name
-    : ''
-  if (routeName === tabName) {
-    return true
-  }
-  return false
-}
-
-function createTabNavigate (config: RootConfig) {
+function createTabStack (config: RootConfig, props: any) {
   const Tab = createBottomTabNavigator()
   const tabBar = config.tabBar
   const tabList: any = []
+
   tabBar?.list.forEach((item, index) => {
     const tabItemOptions = Object.assign({}, getTabItemOptions(item, index))
     const path = item.pagePath.startsWith('/') ? item.pagePath : `/${item.pagePath}`
     const tabName = camelCase(path)
+    const tabPage: PageItem = getTabItem(config, tabName) as PageItem
     const tabNode = React.createElement(Tab.Screen, {
       key: `tab${tabName}`,
-      name: `${item.text}`,
-      options: ({ route }) => ({
+      name: `${tabPage.name}`,
+      options: () => ({
         ...tabItemOptions,
-        tabBarVisible: getTabBarVisible(route, tabName)
-      })
-    }, (props) => createTabItem(config, tabName, props))
+        tabBarVisible: true
+      }),
+      component: tabPage.component,
+      ...props
+    })
     tabList.push(tabNode)
   })
+
   // tabbarOptions
   const tabBarOptions = {
     backBehavior: 'none',
@@ -147,7 +141,34 @@ function createTabNavigate (config: RootConfig) {
       backgroundColor: tabBar.borderStyle
     } : {}
   }
-  return React.createElement(NavigationContainer, null, React.createElement(Tab.Navigator, { tabBarOptions: tabBarOptions }, tabList))
+
+  return React.createElement(Tab.Navigator, { tabOptions: tabBarOptions }, tabList)
+}
+
+function createTabNavigate (config: RootConfig) {
+  const screeList: any = []
+  const Stack = createStackNavigator()
+
+  // 第一个页面是tabbar的
+  const tabScreen = React.createElement(Stack.Screen,
+    {
+      key: 'tabscreen',
+      name: 'tab'
+    }, (props) => createTabStack(config, props))
+  screeList.push(tabScreen)
+  const pageList = getPageList(config)
+  pageList.forEach(item => {
+    const screenNode = React.createElement(Stack.Screen,
+      {
+        key: `${item.name}`,
+        name: `${item.name}`,
+        component: item.component
+      }, null)
+    screeList.push(screenNode)
+  })
+
+  return React.createElement(NavigationContainer, null,
+    React.createElement(Stack.Navigator, { options: null }, screeList))
 }
 
 function createStackNavigate (config: RootConfig) {
@@ -156,10 +177,17 @@ function createStackNavigate (config: RootConfig) {
   if (pageList.length <= 0) return null
   const screenChild: any = []
   pageList.forEach(item => {
-    const screenNode = React.createElement(Stack.Screen, { key: `${item.name}`, name: `${item.name}`, component: item.component }, null)
+    const screenNode = React.createElement(Stack.Screen,
+      {
+        key: `${item.name}`,
+        name: `${item.name}`,
+        component: item.component
+      }, null)
     screenChild.push(screenNode)
   })
-  return React.createElement(NavigationContainer, {}, React.createElement(Stack.Navigator, { options: getStackOptions(config) }, screenChild))
+  return React.createElement(NavigationContainer, {},
+    React.createElement(Stack.Navigator,
+      { options: getStackOptions(config) }, screenChild))
 }
 
 export function createRouter (config: RootConfig) {
