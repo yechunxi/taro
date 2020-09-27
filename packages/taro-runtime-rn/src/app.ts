@@ -9,13 +9,14 @@ interface RNAppConfig {
   pageList: Array<Record<string, any>>
 }
 
-export function createRNApp (App: React.ComponentClass, config: RNAppConfig) {
+export function createReactNativeApp (App: React.ComponentClass, config: RNAppConfig) {
   const appConfig = config.appConfig
   const routerConfig = {
     tabBar: appConfig.tabBar,
     pages: config.pageList,
     window: appConfig.window
   }
+
   const NewAppComponent = (AppCompoent) => {
     return class extends AppCompoent {
       render () {

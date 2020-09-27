@@ -1,4 +1,4 @@
-import { PageInstance } from './instance'
+// import { PageInstance } from './instance'
 
 interface Router {
   params: Record<string, unknown>,
@@ -8,7 +8,7 @@ interface Router {
 interface Current {
   app: any | null,
   router: Router | null,
-  page: PageInstance | null
+  page: unknown
 }
 
 export const Current: Current = {

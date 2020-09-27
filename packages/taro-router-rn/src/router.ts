@@ -120,11 +120,11 @@ function createTabStack (config: RootConfig, props: any) {
     const tabNode = React.createElement(Tab.Screen, {
       key: `tab${tabName}`,
       name: `${tabPage.name}`,
-      options: () => ({
-        ...tabItemOptions,
-        tabBarVisible: true
-      }),
+      options: tabItemOptions,
       component: tabPage.component,
+      tabPath: `${item.pagePath}`,
+      tabIndex: index,
+      tabText: `${item.text}`,
       ...props
     })
     tabList.push(tabNode)
