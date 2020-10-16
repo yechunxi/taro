@@ -1,17 +1,20 @@
 import {
   readConfig
 } from '@tarojs/helper'
+import { TransformPage } from './types/index'
 
-export default function generateRNPage (pagePath: string) {
+export default function generatePage ({ src }: TransformPage) {
+  const pagePath = src
   const config = getPageConfig(pagePath)
   const componentPath = './index.source'
   const configString = JSON.stringify(config)
 
-  const code = `import { createRNPage } from '@tarojs/runtime-rn'
+  const code = `import { createPageConfig } from '@tarojs/runtime-rn'
 import { readConfig } from '@tarojs/helper';
+
   import component from ${componentPath}
   var config = ${configString}
-  export default  createRNPage(component,config)
+  export default  createPageConfig(component,config)
   `
   return code
 }

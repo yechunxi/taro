@@ -2,6 +2,7 @@ import { isEmptyObject } from '@tarojs/helper'
 import { camelCase } from 'lodash'
 import { Config } from '@tarojs/taro'
 import { getConfigContent } from './utils'
+import { TransformType } from './types/index'
 
 function getPagesResource (config: Config) {
   const importPages: string[] = []
@@ -18,7 +19,8 @@ function getPagesResource (config: Config) {
     })
   })
   pages.forEach(item => {
-    const pagePath = item.startsWith('/') ? item : `/${item}`
+    // TODO
+    const pagePath = '/src' + item.startsWith('/') ? item : `/${item}`
     const screenName = camelCase(pagePath)
     const importScreen = `import ${screenName} from '.${pagePath}'`
     importPages.push(importScreen)
@@ -50,7 +52,9 @@ function getAppConfig (appPath: string) {
   return appConfig
 }
 
-export default function generateAppEntry (appPath: string) {
+export default function generateEntry ({ src, filename, options }: TransformType) {
+  console.log(filename, options)
+  const appPath = src
   const appConfig = getAppConfig(appPath)
   const pages = getPagesResource(appConfig)
   const importPageList = pages.importPages.join(';')
@@ -59,14 +63,14 @@ export default function generateAppEntry (appPath: string) {
   const importRedux = ''
   const appComponentPath = './src/app'
 
-  const code = `import { createRNApp } from '@tarojs/runtime-rn'
+  const code = `import { createReactNativeApp } from '@tarojs/runtime-rn'
   import Component from ${appComponentPath}
   ${importPageList}
   ${importRedux}
   var config = ${JSON.stringify({ appConfig: appConfig })}
   config['pageList'] = [${routeList.map(screen => getPageScreen(screen))}]
   window.__taroAppConfig = config
-  export default createRNApp(Component,config)
+  export default createReactNativeApp(Component,config)
   `
   return code
 }

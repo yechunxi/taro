@@ -9,7 +9,7 @@ interface RNAppConfig {
   pageList: Array<Record<string, any>>
 }
 
-export function createReactNativeApp (App: React.ComponentClass, config: RNAppConfig) {
+export function createReactNativeApp (component: React.ComponentClass, config: RNAppConfig) {
   const appConfig = config.appConfig
   const routerConfig = {
     tabBar: appConfig.tabBar,
@@ -26,6 +26,9 @@ export function createReactNativeApp (App: React.ComponentClass, config: RNAppCo
     }
   }
 
-  Current.app = NewAppComponent(App)
-  return Current.app
+  const App = NewAppComponent(component)
+
+  Current.app = App
+
+  return App
 }

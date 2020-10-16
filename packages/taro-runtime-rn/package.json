@@ -20,7 +20,8 @@
   "dependencies": {},
   "devDependencies": {
     "@tarojs/components-rn": "^2.2.10",
+    "@tarojs/router-rn": "file:../taro-router-rn",
     "@tarojs/taro": "^3.0.11",
-    "@tarojs/router-rn": "file:../taro-router-rn"
+    "@tarojs/taro-rn": "^2.2.10"
   }
 }

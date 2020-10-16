@@ -81,10 +81,6 @@ export function createPageConfig (Page: unknown, pageConfig: PageConfig) {
         }
       }
 
-      canScroll () {
-        return true
-      }
-
       onPullDownRefresh () {
         this.setState({ refreshing: true })
         try {
@@ -112,8 +108,8 @@ export function createPageConfig (Page: unknown, pageConfig: PageConfig) {
       }
 
       render () {
-        const { enablePullDownRefresh } = pageConfig
-        return (this.canScroll() ? React.createElement(ScrollView,
+        const { enablePullDownRefresh, disableScroll } = pageConfig
+        return (disableScroll ? React.createElement(ScrollView,
           {
             style: { flex: 1 },
             contentContainerStyle: { minHeight: '100%' },
