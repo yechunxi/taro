@@ -149,7 +149,7 @@
     "rollup-plugin-typescript2": "^0.24.3",
     "sass-loader": "^6.0.7",
     "shelljs": "^0.8.1",
-    "sinon": "^7.5.0",
+    "sinon": "^9.2.2",
     "style-loader": "^0.20.3",
     "stylelint": "^13.6.1",
     "ts-jest": "26.4.0",
