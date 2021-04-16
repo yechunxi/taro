@@ -871,18 +871,18 @@
   dependencies:
     typescript "3.8.2"
 
-"@tarojs/api@3.0.25":
-  version "3.0.25"
-  resolved "https://registry.yarnpkg.com/@tarojs/api/-/api-3.0.25.tgz#b84def26688144b257e7a9036efcf1ff002d42af"
+"@tarojs/api@3.0.26":
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/@tarojs/api/-/api-3.0.26.tgz#bf2252c573d1fdf29bd97f9de6922374e73a504d"
   dependencies:
-    "@tarojs/runtime" "3.0.25"
+    "@tarojs/runtime" "3.0.26"
 
-"@tarojs/components@3.0.25":
-  version "3.0.25"
-  resolved "https://registry.yarnpkg.com/@tarojs/components/-/components-3.0.25.tgz#ca0f1150132df8227c7265696a855ec159280b46"
+"@tarojs/components@3.0.26":
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/@tarojs/components/-/components-3.0.26.tgz#e3ff2fa244cd25ec30fd758f50eb8aad6958bfec"
   dependencies:
     "@stencil/core" "~1.8.1"
-    "@tarojs/taro" "3.0.25"
+    "@tarojs/taro" "3.0.26"
     better-scroll "^1.14.1"
     classnames "^2.2.5"
     intersection-observer "^0.7.0"
@@ -891,9 +891,9 @@
     swiper "4.4.2"
     weui "^1.1.2"
 
-"@tarojs/helper@3.0.25":
-  version "3.0.25"
-  resolved "https://registry.yarnpkg.com/@tarojs/helper/-/helper-3.0.25.tgz#2c73dcfc8990d4a29a56a4455d716aa1d766973d"
+"@tarojs/helper@3.0.26":
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/@tarojs/helper/-/helper-3.0.26.tgz#0c65d45bb93a09ebf5b7e2ae5a7d2df7fed6471a"
   dependencies:
     "@babel/core" "7.11.1"
     "@babel/plugin-proposal-class-properties" "7.10.4"
@@ -904,7 +904,7 @@
     "@babel/preset-typescript" "7.10.4"
     "@babel/register" "7.9.0"
     "@babel/runtime" "7.9.2"
-    "@tarojs/taro" "3.0.25"
+    "@tarojs/taro" "3.0.26"
     babel-plugin-transform-react-jsx "^6.24.1"
     chalk "3.0.0"
     chokidar "3.3.1"
@@ -916,62 +916,62 @@
     resolve "1.15.1"
     yauzl "2.10.0"
 
-"@tarojs/router@3.0.25":
-  version "3.0.25"
-  resolved "https://registry.yarnpkg.com/@tarojs/router/-/router-3.0.25.tgz#469414b854a49489518638dc23432de3eb57dc76"
+"@tarojs/router@3.0.26":
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/@tarojs/router/-/router-3.0.26.tgz#44a1820bbdf5e2f77f5885323d32468e63b8e912"
   dependencies:
-    "@tarojs/runtime" "3.0.25"
+    "@tarojs/runtime" "3.0.26"
     history "^4.10.1"
     universal-router "^8.3.0"
     url-parse "^1.4.7"
 
-"@tarojs/runner-utils@3.0.25":
-  version "3.0.25"
-  resolved "https://registry.yarnpkg.com/@tarojs/runner-utils/-/runner-utils-3.0.25.tgz#369a3298f98b12a63d54ba4ae39faf830710809c"
+"@tarojs/runner-utils@3.0.26":
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/@tarojs/runner-utils/-/runner-utils-3.0.26.tgz#cb3014dc572825b711369294941111e028537a96"
   dependencies:
     "@babel/core" "7.11.1"
-    "@tarojs/helper" "3.0.25"
+    "@tarojs/helper" "3.0.26"
     chalk "^3.0.0"
     fs-extra "^8.1.0"
     lodash "^4.17.15"
     scss-bundle "^3.0.2"
 
-"@tarojs/runtime@3.0.25":
-  version "3.0.25"
-  resolved "https://registry.yarnpkg.com/@tarojs/runtime/-/runtime-3.0.25.tgz#d89b8c13e0102bb2263820937869b8afffc7c82a"
+"@tarojs/runtime@3.0.26":
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/@tarojs/runtime/-/runtime-3.0.26.tgz#45af56520e6cda28faca4c830334606a912d3fd4"
   dependencies:
     lodash-es "4.17.15"
 
-"@tarojs/shared@3.0.25":
-  version "3.0.25"
-  resolved "https://registry.yarnpkg.com/@tarojs/shared/-/shared-3.0.25.tgz#0395bf0652961db82afefe06f33de0c21e639c27"
+"@tarojs/shared@3.0.26":
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/@tarojs/shared/-/shared-3.0.26.tgz#343a1f90decbf0cd4a8192c4ad93a7c536a0bf4a"
 
-"@tarojs/taro-h5@3.0.25":
-  version "3.0.25"
-  resolved "https://registry.yarnpkg.com/@tarojs/taro-h5/-/taro-h5-3.0.25.tgz#ca52c3d50fe0709007bd3bea3d18ea9f227b8a3b"
+"@tarojs/taro-h5@3.0.26":
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro-h5/-/taro-h5-3.0.26.tgz#928d96ff3c31d4a5471bb8f36f3d188154ff754f"
   dependencies:
-    "@tarojs/api" "3.0.25"
-    "@tarojs/router" "3.0.25"
-    "@tarojs/runtime" "3.0.25"
+    "@tarojs/api" "3.0.26"
+    "@tarojs/router" "3.0.26"
+    "@tarojs/runtime" "3.0.26"
     base64-js "^1.3.0"
     jsonp-retry "^1.0.3"
     mobile-detect "^1.4.2"
     raf "^3.4.1"
     whatwg-fetch "^3.4.0"
 
-"@tarojs/taro-loader@3.0.25":
-  version "3.0.25"
-  resolved "https://registry.yarnpkg.com/@tarojs/taro-loader/-/taro-loader-3.0.25.tgz#ac57419f1986e5ce06d91e9f1574b6249e8bb0ea"
+"@tarojs/taro-loader@3.0.26":
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro-loader/-/taro-loader-3.0.26.tgz#4cad4ce3c52c55b1fd7e8a829ece41340e6d5639"
   dependencies:
-    "@tarojs/helper" "3.0.25"
+    "@tarojs/helper" "3.0.26"
     loader-utils "^1.2.3"
 
-"@tarojs/taro@3.0.25":
-  version "3.0.25"
-  resolved "https://registry.yarnpkg.com/@tarojs/taro/-/taro-3.0.25.tgz#1984b28df7cf4dcfaa900bd1269df49c4bd173b6"
+"@tarojs/taro@3.0.26":
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro/-/taro-3.0.26.tgz#91759b22d7ee35176073a1e6bc1daf082e72b82d"
   dependencies:
-    "@tarojs/api" "3.0.25"
-    "@tarojs/taro-h5" "3.0.25"
+    "@tarojs/api" "3.0.26"
+    "@tarojs/taro-h5" "3.0.26"
 
 "@types/anymatch@*":
   version "1.3.1"
@@ -1589,13 +1589,13 @@ babel-plugin-transform-react-jsx@^6.24.1:
     babel-plugin-syntax-jsx "^6.8.0"
     babel-runtime "^6.22.0"
 
-babel-plugin-transform-taroapi@3.0.25:
-  version "3.0.25"
-  resolved "https://registry.yarnpkg.com/babel-plugin-transform-taroapi/-/babel-plugin-transform-taroapi-3.0.25.tgz#e80fbdcb56cc2a6fe459d983b548785798786e96"
+babel-plugin-transform-taroapi@3.0.26:
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/babel-plugin-transform-taroapi/-/babel-plugin-transform-taroapi-3.0.26.tgz#956c6078ebc7d213d346ccc2ff60a58fc46e0d3f"
 
-babel-preset-taro@3.0.25:
-  version "3.0.25"
-  resolved "https://registry.yarnpkg.com/babel-preset-taro/-/babel-preset-taro-3.0.25.tgz#f55eb8e32fa81638cb46605cca46f32c0b3c84e9"
+babel-preset-taro@3.0.26:
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/babel-preset-taro/-/babel-preset-taro-3.0.26.tgz#5c2405bef1bec06d4daf1be3b1e4f54feef51c61"
   dependencies:
     "@babel/core" "7.11.1"
     "@babel/plugin-proposal-class-properties" "7.10.4"
@@ -1606,9 +1606,9 @@ babel-preset-taro@3.0.25:
     "@babel/preset-react" "7.10.4"
     "@babel/preset-typescript" "7.10.4"
     "@babel/runtime" "^7.11.2"
-    "@tarojs/taro-h5" "3.0.25"
+    "@tarojs/taro-h5" "3.0.26"
     babel-plugin-dynamic-import-node "^2.3.3"
-    babel-plugin-transform-taroapi "3.0.25"
+    babel-plugin-transform-taroapi "3.0.26"
     core-js "^3.6.5"
 
 babel-runtime@^6.0.0, babel-runtime@^6.22.0, babel-runtime@^6.23.0, babel-runtime@^6.26.0:
@@ -4875,9 +4875,9 @@ postcss-modules-values@^3.0.0:
     icss-utils "^4.0.0"
     postcss "^7.0.6"
 
-postcss-plugin-constparse@3.0.25:
-  version "3.0.25"
-  resolved "https://registry.yarnpkg.com/postcss-plugin-constparse/-/postcss-plugin-constparse-3.0.25.tgz#bbe742d13fe161751ec4e1cb2fcd49317cef98bb"
+postcss-plugin-constparse@3.0.26:
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/postcss-plugin-constparse/-/postcss-plugin-constparse-3.0.26.tgz#8ff62f7ea7fe6653032695d3d1f130f919e742d5"
   dependencies:
     postcss "^6.0.22"
 
@@ -4888,9 +4888,9 @@ postcss-pxtorem@^4.0.1:
     object-assign "^4.1.0"
     postcss "^5.2.10"
 
-postcss-pxtransform@3.0.25:
-  version "3.0.25"
-  resolved "https://registry.yarnpkg.com/postcss-pxtransform/-/postcss-pxtransform-3.0.25.tgz#1d1b09621c3cf5867170964a5d423cde69a412bf"
+postcss-pxtransform@3.0.26:
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/postcss-pxtransform/-/postcss-pxtransform-3.0.26.tgz#f4397311dfb87c0313e7e361c90a1db07b20c026"
   dependencies:
     postcss "^6.0.16"
     postcss-pxtorem "^4.0.1"
@@ -5725,8 +5725,8 @@ ssr-window@^2.0.0:
   resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-2.0.0.tgz#98c301aef99523317f8d69618f0010791096efc4"
 
 ssri@^6.0.1:
-  version "6.0.1"
-  resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.1.tgz#2a3c41b28dd45b62b63676ecb74001265ae9edd8"
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/ssri/-/ssri-6.0.2.tgz#157939134f20464e7301ddba3e90ffa8f7728ac5"
   dependencies:
     figgy-pudding "^3.5.1"
 
