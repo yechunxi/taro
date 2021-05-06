@@ -8,6 +8,12 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@tarojs/runtime@3.0.26":
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/@tarojs/runtime/-/runtime-3.0.26.tgz#45af56520e6cda28faca4c830334606a912d3fd4"
+  dependencies:
+    lodash-es "4.17.15"
+
 "@types/history@^4.7.5":
   version "4.7.8"
   resolved "https://registry.yarnpkg.com/@types/history/-/history-4.7.8.tgz#49348387983075705fe8f4e02fb67f7daaec4934"
@@ -26,6 +32,10 @@ history@^4.10.1:
 "js-tokens@^3.0.0 || ^4.0.0":
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/js-tokens/-/js-tokens-4.0.0.tgz#19203fb59991df98e3a287050d4647cdeaf32499"
+
+lodash-es@4.17.15:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
 
 loose-envify@^1.2.0:
   version "1.4.0"
@@ -68,8 +78,8 @@ universal-router@^8.3.0:
     path-to-regexp "^3.1.0"
 
 url-parse@^1.4.7:
-  version "1.4.7"
-  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.4.7.tgz#a8a83535e8c00a316e403a5db4ac1b9b853ae278"
+  version "1.5.0"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.0.tgz#90aba6c902aeb2d80eac17b91131c27665d5d828"
   dependencies:
     querystringify "^2.1.1"
     requires-port "^1.0.0"
