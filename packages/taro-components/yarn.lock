@@ -712,6 +712,12 @@
   version "7.8.3"
   resolved "https://registry.yarnpkg.com/@babel/preset-stage-0/-/preset-stage-0-7.8.3.tgz#b6a0eca1a3b72e07f9caf58f998e97568028f6f5"
 
+"@babel/runtime@^7.1.2":
+  version "7.14.0"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.14.0.tgz#46794bc20b612c5f75e62dd071e24dfd95f1cbe6"
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/runtime@^7.3.4", "@babel/runtime@^7.8.4":
   version "7.12.5"
   resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.12.5.tgz#410e7e487441e1b360c29be715d870d9b985882e"
@@ -844,6 +850,47 @@
   resolved "https://registry.yarnpkg.com/@szmarczak/http-timer/-/http-timer-4.0.5.tgz#bfbd50211e9dfa51ba07da58a14cdfd333205152"
   dependencies:
     defer-to-connect "^2.0.0"
+
+"@tarojs/api@3.0.26":
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/@tarojs/api/-/api-3.0.26.tgz#bf2252c573d1fdf29bd97f9de6922374e73a504d"
+  dependencies:
+    "@tarojs/runtime" "3.0.26"
+
+"@tarojs/router@3.0.26":
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/@tarojs/router/-/router-3.0.26.tgz#44a1820bbdf5e2f77f5885323d32468e63b8e912"
+  dependencies:
+    "@tarojs/runtime" "3.0.26"
+    history "^4.10.1"
+    universal-router "^8.3.0"
+    url-parse "^1.4.7"
+
+"@tarojs/runtime@3.0.26":
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/@tarojs/runtime/-/runtime-3.0.26.tgz#45af56520e6cda28faca4c830334606a912d3fd4"
+  dependencies:
+    lodash-es "4.17.15"
+
+"@tarojs/taro-h5@3.0.26":
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro-h5/-/taro-h5-3.0.26.tgz#928d96ff3c31d4a5471bb8f36f3d188154ff754f"
+  dependencies:
+    "@tarojs/api" "3.0.26"
+    "@tarojs/router" "3.0.26"
+    "@tarojs/runtime" "3.0.26"
+    base64-js "^1.3.0"
+    jsonp-retry "^1.0.3"
+    mobile-detect "^1.4.2"
+    raf "^3.4.1"
+    whatwg-fetch "^3.4.0"
+
+"@tarojs/taro@3.0.26":
+  version "3.0.26"
+  resolved "https://registry.yarnpkg.com/@tarojs/taro/-/taro-3.0.26.tgz#91759b22d7ee35176073a1e6bc1daf082e72b82d"
+  dependencies:
+    "@tarojs/api" "3.0.26"
+    "@tarojs/taro-h5" "3.0.26"
 
 "@types/cacheable-request@^6.0.1":
   version "6.0.1"
@@ -1252,7 +1299,7 @@ base64-arraybuffer@0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/base64-arraybuffer/-/base64-arraybuffer-0.1.4.tgz#9818c79e059b1355f97e0428a017c838e90ba812"
 
-base64-js@^1.3.1:
+base64-js@^1.3.0, base64-js@^1.3.1:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.5.1.tgz#1b1b440160a5bf7ad40b650f095963481903930a"
 
@@ -2011,11 +2058,11 @@ dom-serialize@^2.2.1:
     extend "^3.0.0"
     void-elements "^2.0.0"
 
-dom7@^2.1.2:
-  version "2.1.5"
-  resolved "https://registry.yarnpkg.com/dom7/-/dom7-2.1.5.tgz#a79411017800b31d8400070cdaebbfc92c1f6377"
+dom7@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/dom7/-/dom7-3.0.0.tgz#b861ce5d67a6becd7aaa3ad02942ff14b1240331"
   dependencies:
-    ssr-window "^2.0.0"
+    ssr-window "^3.0.0-alpha.1"
 
 dot-case@^3.0.4:
   version "3.0.4"
@@ -2686,6 +2733,17 @@ header-case@^2.0.4:
     capital-case "^1.0.4"
     tslib "^2.0.3"
 
+history@^4.10.1:
+  version "4.10.1"
+  resolved "https://registry.yarnpkg.com/history/-/history-4.10.1.tgz#33371a65e3a83b267434e2b3f3b1b4c58aad4cf3"
+  dependencies:
+    "@babel/runtime" "^7.1.2"
+    loose-envify "^1.2.0"
+    resolve-pathname "^3.0.0"
+    tiny-invariant "^1.0.2"
+    tiny-warning "^1.0.0"
+    value-equal "^1.0.1"
+
 html-escaper@^2.0.0:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/html-escaper/-/html-escaper-2.0.2.tgz#dfd60027da36a36dfcbe236262c00a5822681453"
@@ -3134,6 +3192,12 @@ jsonfile@^6.0.1:
   optionalDependencies:
     graceful-fs "^4.1.6"
 
+jsonp-retry@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/jsonp-retry/-/jsonp-retry-1.0.3.tgz#9e6b18b02ec767a621dd44b4e99439a8a43a6419"
+  dependencies:
+    object-assign "^4.1.1"
+
 karma-chrome-launcher@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/karma-chrome-launcher/-/karma-chrome-launcher-3.1.0.tgz#805a586799a4d05f4e54f72a204979f3f3066738"
@@ -3321,6 +3385,10 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
+lodash-es@4.17.15:
+  version "4.17.15"
+  resolved "https://registry.yarnpkg.com/lodash-es/-/lodash-es-4.17.15.tgz#21bd96839354412f23d7a10340e5eac6ee455d78"
+
 lodash._reinterpolate@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/lodash._reinterpolate/-/lodash._reinterpolate-3.0.0.tgz#0ccf2d89166af03b3663c796538b75ac6e114d9d"
@@ -3396,7 +3464,7 @@ loglevel@^1.6.0:
   version "1.7.1"
   resolved "https://registry.yarnpkg.com/loglevel/-/loglevel-1.7.1.tgz#005fde2f5e6e47068f935ff28573e125ef72f197"
 
-loose-envify@^1.0.0:
+loose-envify@^1.0.0, loose-envify@^1.2.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
   dependencies:
@@ -3551,6 +3619,10 @@ mkdirp@^0.5.1, mkdirp@^0.5.3:
   dependencies:
     minimist "^1.2.5"
 
+mobile-detect@^1.4.2:
+  version "1.4.5"
+  resolved "https://registry.yarnpkg.com/mobile-detect/-/mobile-detect-1.4.5.tgz#da393c3c413ca1a9bcdd9ced653c38281c0fb6ad"
+
 mri@^1.1.0:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/mri/-/mri-1.1.6.tgz#49952e1044db21dbf90f6cd92bc9c9a777d415a6"
@@ -3639,7 +3711,7 @@ npm-run-path@^2.0.0:
   dependencies:
     path-key "^2.0.0"
 
-object-assign@^4.0.1, object-assign@^4.1.0:
+object-assign@^4.0.1, object-assign@^4.1.0, object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
 
@@ -3793,9 +3865,17 @@ path-key@^2.0.0, path-key@^2.0.1:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/path-key/-/path-key-2.0.1.tgz#411cadb574c5a140d3a4b1910d40d80cc9f40b40"
 
+path-to-regexp@^3.1.0:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/path-to-regexp/-/path-to-regexp-3.2.0.tgz#fa7877ecbc495c601907562222453c43cc204a5f"
+
 pend@~1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/pend/-/pend-1.2.0.tgz#7a57eb550a6783f9115331fcf4663d5c8e007a50"
+
+performance-now@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/performance-now/-/performance-now-2.1.0.tgz#6309f4e0e5fa913ec1c69307ae364b4b377c9e7b"
 
 picomatch@^2.0.4, picomatch@^2.2.1:
   version "2.2.2"
@@ -3938,9 +4018,19 @@ query-string@^5.0.1:
     object-assign "^4.1.0"
     strict-uri-encode "^1.0.0"
 
+querystringify@^2.1.1:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/querystringify/-/querystringify-2.2.0.tgz#3345941b4153cb9d082d8eee4cda2016a9aef7f6"
+
 quick-lru@^5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/quick-lru/-/quick-lru-5.1.1.tgz#366493e6b3e42a3a6885e2e99d18f80fb7a8c932"
+
+raf@^3.4.1:
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/raf/-/raf-3.4.1.tgz#0742e99a4a6552f445d73e3ee0328af0ff1ede39"
+  dependencies:
+    performance-now "^2.1.0"
 
 range-parser@^1.2.1:
   version "1.2.1"
@@ -4446,13 +4536,9 @@ sprintf-js@~1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/sprintf-js/-/sprintf-js-1.0.3.tgz#04e6926f662895354f3dd015203633b857297e2c"
 
-ssr-window@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-1.0.1.tgz#30752a6a4666e7767f0b7e6aa6fc2fdbd0d9b369"
-
-ssr-window@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-2.0.0.tgz#98c301aef99523317f8d69618f0010791096efc4"
+ssr-window@^3.0.0, ssr-window@^3.0.0-alpha.1:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/ssr-window/-/ssr-window-3.0.0.tgz#fd5b82801638943e0cc704c4691801435af7ac37"
 
 stack-utils@^1.0.1:
   version "1.0.4"
@@ -4562,12 +4648,12 @@ supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
-swiper@4.4.2:
-  version "4.4.2"
-  resolved "https://registry.yarnpkg.com/swiper/-/swiper-4.4.2.tgz#3a35237cbf4870034784e158b4197b65b763d647"
+swiper@6.5.1:
+  version "6.5.1"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-6.5.1.tgz#795630e45bbebb3b3b2945d55c22ffdcf5536c1b"
   dependencies:
-    dom7 "^2.1.2"
-    ssr-window "^1.0.1"
+    dom7 "^3.0.0"
+    ssr-window "^3.0.0"
 
 tar-fs@^2.0.0:
   version "2.1.1"
@@ -4615,6 +4701,14 @@ through@^2.3.8:
 timed-out@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/timed-out/-/timed-out-4.0.1.tgz#f32eacac5a175bea25d7fab565ab3ed8741ef56f"
+
+tiny-invariant@^1.0.2:
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/tiny-invariant/-/tiny-invariant-1.1.0.tgz#634c5f8efdc27714b7f386c35e6760991d230875"
+
+tiny-warning@^1.0.0:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/tiny-warning/-/tiny-warning-1.0.3.tgz#94a30db453df4c643d0fd566060d60a875d84754"
 
 tmp@0.2.1:
   version "0.2.1"
@@ -4756,6 +4850,12 @@ union-value@^1.0.0:
     is-extendable "^0.1.1"
     set-value "^2.0.1"
 
+universal-router@^8.3.0:
+  version "8.3.0"
+  resolved "https://registry.yarnpkg.com/universal-router/-/universal-router-8.3.0.tgz#533bce135d7b1abf591421c5d2028d54407a34a0"
+  dependencies:
+    path-to-regexp "^3.1.0"
+
 universalify@^0.1.0:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/universalify/-/universalify-0.1.2.tgz#b646f69be3942dabcecc9d6639c80dc105efaa66"
@@ -4803,6 +4903,13 @@ url-parse-lax@^3.0.0:
   dependencies:
     prepend-http "^2.0.0"
 
+url-parse@^1.4.7:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/url-parse/-/url-parse-1.5.1.tgz#d5fa9890af8a5e1f274a2c98376510f6425f6e3b"
+  dependencies:
+    querystringify "^2.1.1"
+    requires-port "^1.0.0"
+
 url-to-options@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/url-to-options/-/url-to-options-1.0.1.tgz#1505a03a289a48cbd7a434efbaeec5055f5633a9"
@@ -4826,6 +4933,10 @@ uuid@^3.3.2:
 uuid@^8.0.0:
   version "8.3.2"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-8.3.2.tgz#80d5b5ced271bb9af6c445f21a1a04c606cefbe2"
+
+value-equal@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/value-equal/-/value-equal-1.0.1.tgz#1e0b794c734c5c0cade179c437d356d931a34d6c"
 
 void-elements@^2.0.0:
   version "2.0.1"
@@ -4890,6 +5001,10 @@ webpack-log@^2.0.0:
 weui@^1.1.2:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/weui/-/weui-1.1.3.tgz#0f0899bb61bb2ec603b2648367a8139298f81514"
+
+whatwg-fetch@^3.4.0:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/whatwg-fetch/-/whatwg-fetch-3.6.2.tgz#dced24f37f2624ed0281725d51d0e2e3fe677f8c"
 
 which-module@^2.0.0:
   version "2.0.0"
