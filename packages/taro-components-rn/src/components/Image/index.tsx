@@ -189,8 +189,7 @@ export class _Image extends React.Component<ImageProps, ImageState> {
         return defaultHeight
       }
     })()
-    const restImageProps = omit(this.props, ['source', 'src', 'resizeMode', 'onLoad', 'onError', 'onLayout', 'style'])
-
+    const restImageProps: any = omit(this.props, ['source', 'src', 'resizeMode', 'onLoad', 'onError', 'onLayout', 'style'])
     return (
       <Image
         testID='image'
