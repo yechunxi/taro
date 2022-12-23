@@ -6,4 +6,5 @@ export interface TextProps {
   children?: React.ReactNode;
   selectable?: boolean;
   onClick?: () => void;
+  animation?: Record<string, any>
 }
