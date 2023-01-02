@@ -100,7 +100,7 @@ importers:
       cross-env: ^7.0.2
       esbuild: ^0.14.27
       eslint: ^8.12.0
-      eslint-config-prettier: ^6.4.0
+      eslint-config-prettier: ^8.6.0
       eslint-config-standard: ^14.1.1
       eslint-config-standard-jsx: ^8.1.0
       eslint-config-taro: workspace:*
@@ -255,7 +255,7 @@ importers:
       cross-env: registry.npmjs.org/cross-env/7.0.3
       esbuild: registry.npmjs.org/esbuild/0.14.47
       eslint: registry.npmjs.org/eslint/8.18.0
-      eslint-config-prettier: registry.npmjs.org/eslint-config-prettier/6.15.0_eslint@8.18.0
+      eslint-config-prettier: registry.npmjs.org/eslint-config-prettier/8.6.0_eslint@8.18.0
       eslint-config-standard: registry.npmjs.org/eslint-config-standard/14.1.1_kh4dbgcrlopojvl2wjliwz75se
       eslint-config-standard-jsx: registry.npmjs.org/eslint-config-standard-jsx/8.1.0_pvloe4reurrd7ffmicb2bet3ki
       eslint-config-taro: link:packages/eslint-config-taro
@@ -263,7 +263,7 @@ importers:
       eslint-plugin-import: registry.npmjs.org/eslint-plugin-import/2.26.0_zgg5sxdhnxsuz2d3vdnwdtmcnu
       eslint-plugin-jest: registry.npmjs.org/eslint-plugin-jest/26.1.3_6sc4zw46gmins6sms33znumwdi
       eslint-plugin-node: registry.npmjs.org/eslint-plugin-node/10.0.0_eslint@8.18.0
-      eslint-plugin-prettier: registry.npmjs.org/eslint-plugin-prettier/3.4.1_5pi6fad7qhihll6yuwi4pumjhu
+      eslint-plugin-prettier: registry.npmjs.org/eslint-plugin-prettier/3.4.1_cmkk2kqmohl2xrz4zuzidzo3ty
       eslint-plugin-promise: registry.npmjs.org/eslint-plugin-promise/4.3.1
       eslint-plugin-react: registry.npmjs.org/eslint-plugin-react/7.30.1_eslint@8.18.0
       eslint-plugin-react-hooks: registry.npmjs.org/eslint-plugin-react-hooks/4.6.0_eslint@8.18.0
@@ -12742,7 +12742,7 @@ packages:
       mississippi: registry.npmjs.org/mississippi/3.0.0
       mkdirp: registry.npmjs.org/mkdirp/0.5.6
       move-concurrently: registry.npmjs.org/move-concurrently/1.0.1
-      promise-inflight: registry.npmjs.org/promise-inflight/1.0.1_bluebird@3.7.2
+      promise-inflight: registry.npmjs.org/promise-inflight/1.0.1
       rimraf: registry.npmjs.org/rimraf/2.7.1
       ssri: registry.npmjs.org/ssri/6.0.2
       unique-filename: registry.npmjs.org/unique-filename/1.1.1
@@ -17054,17 +17054,16 @@ packages:
     optionalDependencies:
       source-map: registry.npmjs.org/source-map/0.6.1
 
-  registry.npmjs.org/eslint-config-prettier/6.15.0_eslint@8.18.0:
-    resolution: {integrity: sha512-a1+kOYLR8wMGustcgAjdydMsQ2A/2ipRPwRKUmfYaSxc9ZPcrku080Ctl6zrZzZNs/U82MjSv+qKREkoq3bJaw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/eslint-config-prettier/-/eslint-config-prettier-6.15.0.tgz}
-    id: registry.npmjs.org/eslint-config-prettier/6.15.0
+  registry.npmjs.org/eslint-config-prettier/8.6.0_eslint@8.18.0:
+    resolution: {integrity: sha512-bAF0eLpLVqP5oEVUFKpMA+NnRFICwn9X8B5jrR9FcqnYBuPbqWEjTEspPWMj5ye6czoSLDweCzSo3Ko7gGrZaA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/eslint-config-prettier/-/eslint-config-prettier-8.6.0.tgz}
+    id: registry.npmjs.org/eslint-config-prettier/8.6.0
     name: eslint-config-prettier
-    version: 6.15.0
+    version: 8.6.0
     hasBin: true
     peerDependencies:
-      eslint: '>=3.14.1'
+      eslint: '>=7.0.0'
     dependencies:
       eslint: registry.npmjs.org/eslint/8.18.0
-      get-stdin: registry.npmjs.org/get-stdin/6.0.0
     dev: true
 
   registry.npmjs.org/eslint-config-standard-jsx/8.1.0_pvloe4reurrd7ffmicb2bet3ki:
@@ -17243,7 +17242,7 @@ packages:
       semver: registry.npmjs.org/semver/6.3.0
     dev: true
 
-  registry.npmjs.org/eslint-plugin-prettier/3.4.1_5pi6fad7qhihll6yuwi4pumjhu:
+  registry.npmjs.org/eslint-plugin-prettier/3.4.1_cmkk2kqmohl2xrz4zuzidzo3ty:
     resolution: {integrity: sha512-htg25EUYUeIhKHXjOinK4BgCcDwtLHjqaxCDsMy5nbnUMkKFvIhMVCp+5GFUXQ4Nr8lBsPqtGAqBenbpFqAA2g==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/eslint-plugin-prettier/-/eslint-plugin-prettier-3.4.1.tgz}
     id: registry.npmjs.org/eslint-plugin-prettier/3.4.1
     name: eslint-plugin-prettier
@@ -17258,7 +17257,7 @@ packages:
         optional: true
     dependencies:
       eslint: registry.npmjs.org/eslint/8.18.0
-      eslint-config-prettier: registry.npmjs.org/eslint-config-prettier/6.15.0_eslint@8.18.0
+      eslint-config-prettier: registry.npmjs.org/eslint-config-prettier/8.6.0_eslint@8.18.0
       prettier: registry.npmjs.org/prettier/2.7.1
       prettier-linter-helpers: registry.npmjs.org/prettier-linter-helpers/1.0.0
     dev: true
@@ -19364,13 +19363,6 @@ packages:
     name: get-stdin
     version: 4.0.1
     engines: {node: '>=0.10.0'}
-
-  registry.npmjs.org/get-stdin/6.0.0:
-    resolution: {integrity: sha512-jp4tHawyV7+fkkSKyvjuLZswblUtz+SQKzSWnBbii16BuZksJlU1wuBYXY75r+duh/llF1ur6oNwi+2ZzjKZ7g==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/get-stdin/-/get-stdin-6.0.0.tgz}
-    name: get-stdin
-    version: 6.0.0
-    engines: {node: '>=4'}
-    dev: true
 
   registry.npmjs.org/get-stdin/8.0.0:
     resolution: {integrity: sha512-sY22aA6xchAzprjyqmSEQv4UbAAzRN0L2dQB0NlN5acTTK9Don6nhoc3eAbUnpZiCANAMfd/+40kVdKfFygohg==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/get-stdin/-/get-stdin-8.0.0.tgz}
@@ -28957,19 +28949,6 @@ packages:
     peerDependenciesMeta:
       bluebird:
         optional: true
-
-  registry.npmjs.org/promise-inflight/1.0.1_bluebird@3.7.2:
-    resolution: {integrity: sha512-6zWPyEOFaQBJYcGMHBKTKJ3u6TBsnMFOIZSa6ce1e/ZrrsOlnHRHbabMjLiBYKp+n44X9eUI6VUPaukCXHuG4g==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/promise-inflight/-/promise-inflight-1.0.1.tgz}
-    id: registry.npmjs.org/promise-inflight/1.0.1
-    name: promise-inflight
-    version: 1.0.1
-    peerDependencies:
-      bluebird: '*'
-    peerDependenciesMeta:
-      bluebird:
-        optional: true
-    dependencies:
-      bluebird: registry.npmjs.org/bluebird/3.7.2
 
   registry.npmjs.org/promise-polyfill/7.1.2:
     resolution: {integrity: sha512-FuEc12/eKqqoRYIGBrUptCBRhobL19PS2U31vMNTfyck1FxPyMfgsXyW4Mav85y/ZN1hop3hOwRlUDok23oYfQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/promise-polyfill/-/promise-polyfill-7.1.2.tgz}
