@@ -25,7 +25,7 @@ importers:
       '@commitlint/cli': ^16.2.1
       '@commitlint/config-conventional': ^16.2.1
       '@rollup/plugin-babel': ^5.2.1
-      '@rollup/plugin-buble': ^0.21.3
+      '@rollup/plugin-buble': ^1.0.2
       '@rollup/plugin-commonjs': ^20.0.0
       '@rollup/plugin-node-resolve': ^8.0.0
       '@tarojs/components': workspace:*
@@ -156,7 +156,7 @@ importers:
       '@commitlint/cli': registry.npmjs.org/@commitlint/cli/16.3.0
       '@commitlint/config-conventional': registry.npmjs.org/@commitlint/config-conventional/16.2.4
       '@rollup/plugin-babel': registry.npmjs.org/@rollup/plugin-babel/5.3.1_kbdetlfpm2dg3tr6ofzylrqxq4
-      '@rollup/plugin-buble': registry.npmjs.org/@rollup/plugin-buble/0.21.3_rollup@2.79.0
+      '@rollup/plugin-buble': registry.npmjs.org/@rollup/plugin-buble/1.0.2_rollup@2.79.0
       '@rollup/plugin-commonjs': registry.npmjs.org/@rollup/plugin-commonjs/20.0.0_rollup@2.79.0
       '@rollup/plugin-node-resolve': registry.npmjs.org/@rollup/plugin-node-resolve/8.4.0_rollup@2.79.0
       '@tarojs/components': link:packages/taro-components
@@ -8460,16 +8460,19 @@ packages:
       rollup: registry.npmjs.org/rollup/2.79.0
     dev: true
 
-  registry.npmjs.org/@rollup/plugin-buble/0.21.3_rollup@2.79.0:
-    resolution: {integrity: sha512-Iv8cCuFPnMdqV4pcyU+OrfjOfagPArRQ1PyQjx5KgHk3dARedI+8PNTLSMpJts0lQJr8yF2pAU4GxpxCBJ9HYw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@rollup/plugin-buble/-/plugin-buble-0.21.3.tgz}
-    id: registry.npmjs.org/@rollup/plugin-buble/0.21.3
+  registry.npmjs.org/@rollup/plugin-buble/1.0.2_rollup@2.79.0:
+    resolution: {integrity: sha512-Hz9+AigRWwS93vmorrVrhyG9SdSCZAkBDx614w09iFQYFUAP2HmdUrQyZsb1WO2n+iDvPFznrTE16la+eGNcEQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@rollup/plugin-buble/-/plugin-buble-1.0.2.tgz}
+    id: registry.npmjs.org/@rollup/plugin-buble/1.0.2
     name: '@rollup/plugin-buble'
-    version: 0.21.3
-    engines: {node: '>= 8.0.0'}
+    version: 1.0.2
+    engines: {node: '>=14.0.0'}
     peerDependencies:
-      rollup: ^1.20.0||^2.0.0
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
     dependencies:
-      '@rollup/pluginutils': registry.npmjs.org/@rollup/pluginutils/3.1.0_rollup@2.79.0
+      '@rollup/pluginutils': registry.npmjs.org/@rollup/pluginutils/5.0.2_rollup@2.79.0
       '@types/buble': registry.npmjs.org/@types/buble/0.19.2
       buble: registry.npmjs.org/buble/0.20.0
       rollup: registry.npmjs.org/rollup/2.79.0
@@ -8625,6 +8628,24 @@ packages:
     dependencies:
       estree-walker: registry.npmjs.org/estree-walker/2.0.2
       picomatch: registry.npmjs.org/picomatch/2.3.1
+    dev: true
+
+  registry.npmjs.org/@rollup/pluginutils/5.0.2_rollup@2.79.0:
+    resolution: {integrity: sha512-pTd9rIsP92h+B6wWwFbW8RkZv4hiR/xKsqre4SIuAOaOEQRxi0lqLke9k2/7WegC85GgUs9pjmOjCUi3In4vwA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@rollup/pluginutils/-/pluginutils-5.0.2.tgz}
+    id: registry.npmjs.org/@rollup/pluginutils/5.0.2
+    name: '@rollup/pluginutils'
+    version: 5.0.2
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0||^3.0.0
+    peerDependenciesMeta:
+      rollup:
+        optional: true
+    dependencies:
+      '@types/estree': registry.npmjs.org/@types/estree/1.0.0
+      estree-walker: registry.npmjs.org/estree-walker/2.0.2
+      picomatch: registry.npmjs.org/picomatch/2.3.1
+      rollup: registry.npmjs.org/rollup/2.79.0
     dev: true
 
   registry.npmjs.org/@rollup/pluginutils/5.0.2_rollup@3.12.0:
@@ -10765,6 +10786,7 @@ packages:
     id: registry.npmjs.org/acorn-dynamic-import/4.0.0
     name: acorn-dynamic-import
     version: 4.0.0
+    deprecated: This is probably built in to whatever tool you're using. If you still need it... idk
     peerDependencies:
       acorn: ^6.0.0
     dependencies:
