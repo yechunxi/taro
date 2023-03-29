@@ -513,7 +513,7 @@ export default class TaroMiniPlugin {
       })
     }
 
-    if (publicComponents && isUsingCustomWrapper) {
+    if (isUsingCustomWrapper) {
       pluginJSON.publicComponents = Object.assign({}, publicComponents, {
         [customWrapperName]: customWrapperName
       })
